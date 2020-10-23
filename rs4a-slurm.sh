@@ -5,7 +5,6 @@
 #SBATCH --time=24:00:00   # walltime
 #SBATCH --ntasks=5   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
-#SBATCH -J "rplspl"   # job name
 
 ## /SBATCH -p general # partition (queue)
 #SBATCH -J "rs4a"   # job name
