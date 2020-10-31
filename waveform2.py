@@ -52,7 +52,7 @@ class Waveform(DPT.DPObject):
         
         # read the mountainsort template files
         self.data = [np.squeeze(templates)]
-        dim=self.data.shape
+        dim=self.data
         
         
         # .........................................
@@ -62,7 +62,7 @@ class Waveform(DPT.DPObject):
         
         # check on the mountainsort template data and create a DPT object accordingly
         # Example:
-        if dim[0] != 0:
+        if dim:
             # create object if data is not empty
             DPT.DPObject.create(self, *args, **kwargs)
         else:
