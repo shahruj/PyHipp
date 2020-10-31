@@ -21,6 +21,11 @@ class Waveform(DPT.DPObject):
         DPT.levels.resolve_level('day', self.channel_filename[0]),'mountains', self.channel_filename[0], 'output', 'templates.hkl')
         # this function will be called once to create this waveform object
         templates=hkl.load(template_fileanme)
+        aname = DPT.levels.normpath(os.path.dirname(pwd))
+        self.array_dict = dict()
+        self.array_dict[aname] = 0
+        self.numSets = 1
+        self.current_plot_type = None
         # one neat property of Object-Oriented Programming (OOP) structure is that 
         # you can create some field-value pairs that can be called and updated 
         # in all functions of the object, if you specify the function properly.
