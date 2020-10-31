@@ -64,5 +64,11 @@ class Waveform(DPT.DPObject):
             # create empty object if data is empty
             DPT.DPObject.create(self, dirs=[], *args, **kwargs)            
         
+    def append(self, wf):
+        DPT.DPObject.append(self, wf)
+        self.data = self.data + wf.data
+        for ar in wf.array_dict:
+            self.array_dict[ar] = self.numSets
+        self.numSets += 1
 
  
